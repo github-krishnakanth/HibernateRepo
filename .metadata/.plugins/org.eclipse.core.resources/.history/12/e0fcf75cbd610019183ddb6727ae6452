@@ -1,0 +1,9 @@
+package com.otm.entities;
+
+import java.io.Serializable;
+
+public class Block implements Serializable {
+	private static final long serialVersionUID = -9213021967081143908L;
+	
+	
+}

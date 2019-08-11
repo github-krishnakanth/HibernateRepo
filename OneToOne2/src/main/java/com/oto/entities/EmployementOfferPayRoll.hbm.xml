@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.oto.entities">
+	<class name="EmployementOfferPayRoll" table="employement_offer_pay_roll">
+		<id name="offerId" column="offer_id">
+			<generator class="foreign">
+				<param name="property">employementOffer</param>
+			</generator>
+		</id>
+		<property name="basic"/>
+		<property name="hra"/>
+		<property name="pf"/>
+		<property name="medicalClaimAmount" column="medical_claim_amount"/>
+		<property name="specialAllowances" column="special_allowances"/>
+		<one-to-one name="employementOffer" class="EmployementOffer" constrained="true"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otm.entities">
+	<class name="Cheque" table="cheque">
+		<id name="chequeNo" column="cheque_no">
+			<generator class="increment"/>
+		</id>
+		<property name="borrowerName" column="borrower_nm"/>
+		<property name="issuedBy" column="issued_by"/>
+		<property name="issuedDate" column="issued_dt"/>
+		<property name="amount"/>
+		<property name="status"/>
+	</class>
+</hibernate-mapping>

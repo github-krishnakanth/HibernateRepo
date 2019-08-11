@@ -1,0 +1,8 @@
+package com.hql.bo;
+
+public class Flat {
+	
+	protected int flatNo;
+	protected String flatType;
+	protected 
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping package="com.idg.entities">
+    	<class name="Customer" table="customer">
+    		<id name="customerId" column="customer_id">
+    			<generator class="guid"/>
+    		</id>
+    		<property name="customerName" column="customer_name"/>
+    		<property name="addressLine1" column="address_line1"/>
+    		<property name="addressLine2" column="address_line2"/>
+    		<property name="city"/>
+    		<property name="state"/>
+    		<property name="zip"/>
+    		<property name="country"/>
+    		<property name="contactNo" column="contact_no"/>
+    		<property name="emailAddress" column="email_address"/>
+    	</class>
+    </hibernate-mapping>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otm.entities">
+	<class name="Society" table="society">
+		<id name="societyNo" column="society_no">
+			<generator class="increment"/>
+		</id>
+		<property name="societyName" column="society_nm"/>
+		<property name="registeredName" column="registered_nm"/>
+		<property name="societyRegisteredDate" column="society_reg_dt"/>
+		<property name="addressLine1"/>
+		<property name="addressLine2"/>
+		<property name="city"/>
+		<property name="state"/>
+		<property name="zip"/>
+		<property name="country"/>
+		<property name="contactNo" column="contact_no"/>
+		<property name="emailAddress" column="email_address"/>
+		<list name="staffs">
+			<key column="staff_no" not-null="false"/>
+			<list-index column="sr_society_staff_order" base="1"/>
+			<one-to-many class="Staff"/>
+		</list>
+	</class>
+</hibernate-mapping>

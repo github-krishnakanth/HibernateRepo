@@ -1,0 +1,51 @@
+package com.mtm.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.mtm.entities.Job;
+import com.mtm.entities.Skill;
+import com.mtm.util.SessionFactoryRegistry;
+
+public class OTMTest {
+
+	public static void main(String[] args) {
+		SessionFactory sessionFactory = null;
+		Session session = null;
+		Transaction transaction = null;
+		boolean flag = false;
+		Skill skill = null;
+		Skill skill1 = null;
+		Skill skill2 = null;
+		Job job = null;
+		List<Skill> skills = null;
+		
+		sessionFactory = SessionFactoryRegistry.getSessionFactory();
+		
+		try {
+			session = sessionFactory.openSession();
+			transaction = session.beginTransaction();
+			skills = new ArrayList<Skill>();
+			
+			
+			
+			flag = true;
+		}finally {
+			if(transaction!=null) {
+				if(flag) {
+					transaction.commit();
+				}else {
+					transaction.rollback();
+				}
+			}
+			if(session!=null) {
+				session.close();
+			}
+			SessionFactoryRegistry.closeSessionFactory();
+		}
+	}
+}

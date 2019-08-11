@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.mtm.entities">
+	<class name="Job" table="job">
+		<id name="jobNo" column="job_no">
+			<generator class="increment"/>
+		</id>
+		<property name="title"/>
+		<property name="description"/>
+		<property name="offeredSalary" column="offered_salary"/>
+		<property name="location"/>
+		
+		<set name="skills" table="job_skills" fetch="join" cascade="delete-orphan">
+			<key column="job_no" not-null="true"/>
+			<many-to-many column="skill_no" class="Skill"></many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>

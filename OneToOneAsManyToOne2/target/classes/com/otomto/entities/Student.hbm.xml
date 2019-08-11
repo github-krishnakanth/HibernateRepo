@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otomto.entities">
+	<class name="Student" table="student">
+		<id name="studentNo" column="student_no">
+			<generator class="increment"/>
+		</id>
+		<property name="studentName" column="student_name"/>
+		<property name="gender"/>
+		<property name="age"/>
+		<property name="study"/>
+		<property name="contactNo" column="contact_no"/>
+		<property name="emailAddress" column="email_Address"/>
+		<many-to-one name="school" class="School" unique="true" fetch="join" not-null="true"/>		
+	</class>
+</hibernate-mapping>    

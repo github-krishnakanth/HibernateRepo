@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings
+	xmlns="http://java.sun.com/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm 
+        http://java.sun.com/xml/ns/persistence/orm_2_0.xsd" version="2.0">
+	<entity class="com.fjpa.entities.Society">
+		<table name="society" schema="christydb"/>
+		<attributes>
+			<id name="societyNo">
+				<column name="society_no"/>
+			</id>
+			<basic name="societyName">
+				<column name="society_nm"/>
+			</basic>
+			<basic name="registeredName">
+				<column name="registered_nm"/>
+			</basic>
+			<basic name="societyRegisteredDate">
+				<column name="society_reg_date"/>
+			</basic>
+			<basic name="addressLine1">
+				<column name="addressLine1"/>
+			</basic>
+			<basic name="addressLine2">
+				<column name="addressLine2"/>
+			</basic>
+			<basic name="city">
+				<column name="city"/>
+			</basic>
+			<basic name="state">
+				<column name="state"/>
+			</basic>
+			<basic name="zip">
+				<column name="zip"/>
+			</basic>
+			<basic name="country">
+				<column name="country"/>
+			</basic>
+			<basic name="mobileNo">
+				<column name="mobile_nbr"/>
+			</basic>
+			<basic name="emailAddress">
+				<column name="email_address"/>
+			</basic>
+		</attributes>
+	</entity>
+</entity-mappings>        

@@ -1,0 +1,51 @@
+package com.mtm.test;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.mtm.entities.Order;
+import com.mtm.entities.Product;
+import com.mtm.util.SessionFactoryRegistry;
+
+public class OTMTest {
+
+	public static void main(String[] args) {
+		SessionFactory sessionFactory = null;
+		Session session = null;
+		Transaction transaction = null;
+		boolean flag = false;
+		Product product = null;
+		Order order = null;
+		List<Product> products = null;
+		
+		sessionFactory = SessionFactoryRegistry.getSessionFactory();
+		
+		try {
+			session = sessionFactory.openSession();
+			transaction = session.beginTransaction();
+			
+			
+			
+			flag = true;
+		}finally {
+			if(transaction!=null) {
+				if(flag) {
+					transaction.commit();
+				}else {
+					transaction.rollback();
+				}
+			}
+			if(session!=null) {
+				session.close();
+			}
+			SessionFactoryRegistry.closeSessionFactory();
+		}
+	}
+}

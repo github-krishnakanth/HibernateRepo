@@ -1,0 +1,69 @@
+package com.otm.test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.otm.entities.Block;
+import com.otm.entities.Flat;
+import com.otm.util.SessionFactoryRegistry;
+
+public class OTMTest {
+
+	public static void main(String[] args) {
+		SessionFactory sessionFactory = null;
+		Session session = null;
+		Transaction transaction = null;
+		boolean flag = false;
+		Block block = null;
+		Flat flat = null;
+		Set<Flat> flats = null;
+		
+		sessionFactory = SessionFactoryRegistry.getSessionFactory();
+		
+		try {
+			session = sessionFactory.openSession();
+			transaction = session.beginTransaction();
+			flats = new HashSet<Flat>();
+			
+			/*
+			 * flat = new Flat(); flat.setFlatType("2BHK"); flat.setDescription("2BHK");
+			 * flat.setFacing("East"); flat.setFloor(1); flat.setSqft(450);
+			 * flat.setStatus("true"); session.save(flat); flats.add(flat);
+			 * 
+			 * flat = new Flat(); flat.setFlatType("3BHK"); flat.setDescription("3BHK");
+			 * flat.setFacing("East"); flat.setFloor(2); flat.setSqft(480);
+			 * flat.setStatus("true"); session.save(flat); flats.add(flat);
+			 * 
+			 * flat = new Flat(); flat.setFlatType("#BHK"); flat.setDescription("3BHK");
+			 * flat.setFacing("East"); flat.setFloor(3); flat.setSqft(450);
+			 * flat.setStatus("true"); session.save(flat); flats.add(flat);
+			 * 
+			 * block = new Block(); block.setBlockName("Asian");
+			 * block.setDescription("Asian"); block.setUnits(15); block.setFlats(flats);
+			 * session.save(block);
+			 */
+			 
+			  block = (Block)session.get(Block.class, 1);
+			  System.out.println("Block Name: "+block.getBlockName()); flats =
+			  block.getFlats(); for(Flat bflat : flats) { System.out.println(bflat); }
+			
+			  flag = true;
+		}finally {
+				if(flag) {
+					transaction.commit();
+				}else {
+					transaction.rollback();
+				}
+			}
+			if(session!=null) {
+				session.close();
+			}
+			SessionFactoryRegistry.closeSessionFactory();
+		}
+}
+
+

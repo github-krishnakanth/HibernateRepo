@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otm.entities">
+	<class name="Branch" table="branch">
+		<id name="branchNo" column="branch_no">
+			<generator class="increment"/>
+		</id>
+		<property name="branchName" column="branch_nm"/>
+		<property name="bankName" column="bank_nm"/>
+		<property name="location"/>
+		<property name="ifscCode" column="ifsc_code"/>
+		<map name="chequeMap">
+			<key column="branch_no" not-null="false"/>
+			<map-key column="cheque_tx_no" type="String"/>
+			<one-to-many class="Cheque"/>
+		</map>
+	</class>	
+</hibernate-mapping>

@@ -1,0 +1,9 @@
+package com.mtm.entities;
+
+import java.io.Serializable;
+
+public class Order implements Serializable {
+	private static final long serialVersionUID = -5832453146778058113L;
+	
+	
+}

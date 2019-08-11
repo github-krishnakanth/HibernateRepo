@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otm.entities">
+	<class name="Block" table="set_block">
+		<id name="blockNo" column="block_no">
+			<generator class="increment"/>
+		</id>
+		<property name="blockName" column="block_name"/>
+		<property name="description"/>
+		<property name="units"/>
+		<set name="flats">
+			<key column="block_no"/>
+			<one-to-many class="Flat"/>
+		</set>
+	</class>
+</hibernate-mapping>

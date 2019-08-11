@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping package="com.slc.entities">
+    	<class name="Block" table="blocks">
+    		<cache usage="transactional"/> 
+    		<id name="blockNo" column="block_no">
+    			<generator class="increment"/>
+    		</id>
+    		<property name="blockName" column="block_nm"/>
+    		<property name="description"/>
+    		<property name="units"/>
+    		<set name="flats" fetch="select" inverse="true">
+    			<cache usage="read-only"/>
+    			<key column="block_no" not-null="true"/>
+    			<one-to-many class="Flat"/>
+    		</set>
+    	</class>
+    </hibernate-mapping>

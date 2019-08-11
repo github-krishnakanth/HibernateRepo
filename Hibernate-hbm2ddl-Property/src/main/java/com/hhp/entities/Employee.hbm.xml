@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Apr 2, 2019 11:12:36 AM by Hibernate Tools 5.0.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="christydb" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.hhp.entities.Employee" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="employee">
+        <id name="eno" type="int">
+            <column name="eno"/>
+        </id>
+        <property generated="never" lazy="false" name="ename" optimistic-lock="true" type="string" unique="false">
+            <column length="25" name="ename"/>
+        </property>
+        <property generated="never" lazy="false" name="esal" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="esal"/>
+        </property>
+        <property generated="never" lazy="false" name="eaddr1" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="eaddr1"/>
+        </property>
+        <property generated="never" lazy="false" name="eaddr2" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="eaddr2"/>
+        </property>
+        <property generated="never" lazy="false" name="city" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="city"/>
+        </property>
+        <property generated="never" lazy="false" name="state" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="state"/>
+        </property>
+        <property generated="never" lazy="false" name="zip" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="zip"/>
+        </property>
+        <property generated="never" lazy="false" name="country" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="country"/>
+        </property>
+    </class>
+</hibernate-mapping>

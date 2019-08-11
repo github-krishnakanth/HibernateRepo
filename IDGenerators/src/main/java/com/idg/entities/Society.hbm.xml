@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping package="com.idg.entities">
+    	<class name="Society" table="society">
+    		<id name="societyNo" column="society_no">
+    			<!-- <generator class="assigned"/> -->
+    			<!-- <generator class="increment"/> -->
+    			<!-- <generator class="identity"/> -->
+    			<!-- MySQL doesn't support Sequence but it supports auto_increment column --> 
+    			<!-- <generator class="sequence">
+    				<param name="sequence">society_no_sequence</param>
+    			</generator> -->
+    			<generator class="hilo">
+    				<param name="max_lo">10</param>
+    				<param name="table">society_unique_key</param>
+    				<param name="column">society_no_pk</param>
+    			</generator>
+    			<!-- <generator class="native"/> -->
+    			<!-- <generator class="seqhilo">
+    				<param name="max_lo">10</param>
+    				<param name="sequence">society_no_sequence</param>
+    			</generator> -->
+    			<!-- <generator class="uuid"/> -->
+    			<!-- <generator class="guid"/> -->
+    			<!-- <generator class="select"/> --> 
+    		</id>
+    		<property name="societyName" column="society_nm"/>
+    		<property name="registeredName" column="registered_nm"/>
+    		<property name="societyRegisteredDate" column="society_reg_date"/>
+    		<property name="addressLine1"/>
+    		<property name="addressLine2"/>
+    		<property name="city"/>
+    		<property name="state"/>
+    		<property name="zip"/>
+    		<property name="country"/>
+    		<property name="mobileNo" column="mobile_nbr"/>
+    		<property name="emailAddress" column="email_address"/>
+    	</class>
+    </hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.oto.entities">
+	<class name="Scholarship" table="scholarship">
+		<id name="admissionNo" column="admission_no">
+			<generator class="foreign">
+				<param name="property">admission</param>
+			</generator>
+		</id>
+		<property name="scholarshipType" column="scholarship_type"/>
+		<property name="sanctionedDate" column="sanctioned_dt"/>
+		<property name="category"/>
+		<property name="sanctionedAmount" column="sanctioned_amount"/>
+		<one-to-one name="admission" class="Admission"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=GetVSLoad/src\/main\/java&lt;com.gvl.entities{IAppointment.java[IAppointment" modifiers="513" timestamp="1553924125577"/>
+<typeInfo handle="=Javassist/src\/main\/java&lt;com.jst.service{FundsTransferService.java[FundsTransferService" modifiers="513" timestamp="1553938476907"/>
+<typeInfo handle="=FetchingStaff/src\/main\/java&lt;com.fs.dao{StaffDao.java[StaffDao" modifiers="513" timestamp="1554117356015"/>
+<typeInfo handle="=FetchingStaff/src\/main\/java&lt;com.fs.entities{Staff.java[Staff" modifiers="1" timestamp="1554116535946"/>
+<typeInfo handle="=IDGenerators/src\/main\/java&lt;com.idg.dao{SocietyDao.java[SocietyDao" modifiers="513" timestamp="1554223031472"/>
+<typeInfo handle="=FirstHibernateAnnotation/src\/main\/java&lt;com.fha.dao{ProductDao.java[ProductDao" modifiers="513" timestamp="1554354479451"/>
+<typeInfo handle="=TablePerSubClass/C:\/Users\/desk\/.m2\/repository\/net\/sf\/ehcache\/ehcache-core\/2.4.3\/ehcache-core-2.4.3.jar&lt;net.sf.ehcache.distribution(PayloadUtil.class[PayloadUtil" modifiers="48" timestamp="1555158630235"/>
+<typeInfo handle="=TablePerSubClass/src\/main\/java&lt;com.tsc.entities{Payment.java[Payment" modifiers="1" timestamp="1555328372675"/>
+</typeInfoHistroy>

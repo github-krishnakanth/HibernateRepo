@@ -1,0 +1,111 @@
+package com.mtm.entities;
+
+import java.io.Serializable;
+import java.util.Map;
+
+public class Member implements Serializable {
+	private static final long serialVersionUID = 9098336779917404293L;
+	
+	protected int memberNo;
+	protected String memeberName;
+	protected String contactNo;
+	protected String emailAddress;
+	
+	protected Map<String, Responsibility> memberResponsibilities;
+
+	public int getMemberNo() {
+		return memberNo;
+	}
+
+	public void setMemberNo(int memberNo) {
+		this.memberNo = memberNo;
+	}
+
+	public String getMemeberName() {
+		return memeberName;
+	}
+
+	public void setMemeberName(String memeberName) {
+		this.memeberName = memeberName;
+	}
+
+	public String getContactNo() {
+		return contactNo;
+	}
+
+	public void setContactNo(String contactNo) {
+		this.contactNo = contactNo;
+	}
+
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+	public Map<String, Responsibility> getMemberResponsibilities() {
+		return memberResponsibilities;
+	}
+
+	public void setMemberResponsibilities(Map<String, Responsibility> memberResponsibilities) {
+		this.memberResponsibilities = memberResponsibilities;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((contactNo == null) ? 0 : contactNo.hashCode());
+		result = prime * result + ((emailAddress == null) ? 0 : emailAddress.hashCode());
+		result = prime * result + ((memberResponsibilities == null) ? 0 : memberResponsibilities.hashCode());
+		result = prime * result + ((memeberName == null) ? 0 : memeberName.hashCode());
+		result = prime * result + memberNo;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Member other = (Member) obj;
+		if (contactNo == null) {
+			if (other.contactNo != null)
+				return false;
+		} else if (!contactNo.equals(other.contactNo))
+			return false;
+		if (emailAddress == null) {
+			if (other.emailAddress != null)
+				return false;
+		} else if (!emailAddress.equals(other.emailAddress))
+			return false;
+		if (memberResponsibilities == null) {
+			if (other.memberResponsibilities != null)
+				return false;
+		} else if (!memberResponsibilities.equals(other.memberResponsibilities))
+			return false;
+		if (memeberName == null) {
+			if (other.memeberName != null)
+				return false;
+		} else if (!memeberName.equals(other.memeberName))
+			return false;
+		if (memberNo != other.memberNo)
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Member [memeberNo=" + memberNo + ", memeberName=" + memeberName + ", contactNo=" + contactNo
+				+ ", emailAddress=" + emailAddress + ", memberResponsibilities=" + memberResponsibilities + "]";
+	}
+}

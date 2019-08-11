@@ -1,0 +1,5 @@
+package com.otm.entities;
+
+public class Flat {
+
+}

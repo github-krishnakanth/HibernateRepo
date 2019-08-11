@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;com.hhp.cfg&apos; to &apos;Hibernate-hbm2ddl-Property/src/main/resources&apos;&#x0D;&#x0A;- Original project: &apos;Hibernate-hbm2ddl-Property&apos;&#x0D;&#x0A;- Destination element: &apos;Hibernate-hbm2ddl-Property/src/main/resources&apos;&#x0D;&#x0A;- Original element: &apos;Hibernate-hbm2ddl-Property/src/main/java/com.hhp.cfg&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="/src\/main\/resources" element1="/src\/main\/java&lt;com.hhp.cfg" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1554183177777" version="1.0"/>
+</session>

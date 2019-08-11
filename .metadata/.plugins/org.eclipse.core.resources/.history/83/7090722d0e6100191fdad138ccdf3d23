@@ -1,0 +1,60 @@
+package com.otm.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.otm.entities.Society;
+import com.otm.entities.Staff;
+import com.otm.util.SessionFactoryRegistry;
+
+public class OTMTest {
+
+	public static void main(String[] args) {
+		SessionFactory sessionFactory = null;
+		Session session = null;
+		Transaction transaction = null;
+		boolean flag = false;
+		Society society = null;
+		Staff staff = null;
+		List<Staff> lstaff = null;
+		
+		sessionFactory = SessionFactoryRegistry.getSessionFactory();
+		
+		try {
+			session = sessionFactory.openSession();
+			transaction = session.beginTransaction();
+			
+			staff = new Staff();
+			lstaff = new ArrayList<Staff>();
+			staff.setStaffFirstName("AAA");
+			staff.setStaffLastName("AAA");
+			staff.setType("AAA");
+			staff.setContactNo("22525225");
+			staff.setEmailAddress("AAA");
+			staff.setAddressLine1("AAA");
+			staff.setAddressLine2("AAA");
+			staff.setCity("AAA");
+			staff.setState("AAA");
+			staff.setZip(55224);
+			staff.setCountry("AAA");
+			
+			flag = true;
+		}finally {
+			if(transaction!=null) {
+				if(flag) {
+					transaction.commit();
+				}else {
+					transaction.rollback();
+				}
+			}
+			if(session!=null) {
+				session.close();
+			}
+			SessionFactoryRegistry.closeSessionFactory();
+		}
+	}
+}

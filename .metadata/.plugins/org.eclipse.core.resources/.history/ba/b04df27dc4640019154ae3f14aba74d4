@@ -1,0 +1,32 @@
+package com.company.test;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.company.entity.Company;
+
+public class CompanyTest {
+
+	public static void main(String[] args) {
+		Configuration configuration = new Configuration().configure();
+		SessionFactory sessionFactory = configuration.buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		/*
+		 * Company company = (Company)session.get(Company.class, 1);
+		 * System.out.println(company);
+		 */
+		 Query query = session.createQuery("select c from Company as c"); 
+		/* Query query = session.createQuery("from Company"); */
+		/* Query query = session.createQuery("from Company as c"); */
+		List<Company> companies = query.list();
+		for(Company company : companies) {
+			System.out.println(company);
+		}
+		session.close();
+		sessionFactory.close();
+	}
+}

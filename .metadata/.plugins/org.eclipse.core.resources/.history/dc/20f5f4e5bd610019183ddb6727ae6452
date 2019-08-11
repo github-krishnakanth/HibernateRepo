@@ -1,0 +1,9 @@
+package com.otm.entities;
+
+import java.io.Serializable;
+
+public class Flat implements Serializable {
+	private static final long serialVersionUID = 6604528311694573345L;
+	
+	
+}

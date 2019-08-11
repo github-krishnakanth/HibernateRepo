@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tsc.entities">
+	<class name="Payment" table="payment">
+		<id name="paymentNo" column="payment_no">
+			<generator class="identity"/>
+		</id>
+		<property name="paymentDate" column="payment_dt"/>
+		<property name="merchantName" column="merchant_nm"/>
+		<property name="amount"/>
+	</class>	
+</hibernate-mapping>

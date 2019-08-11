@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.mtm.entities">
+	<class name="Member" table="member">
+		<id name="memberNo" column="member_no">
+			<generator class="increment"/>
+		</id>
+		<property name="memberName" column="member_name"/>
+		<property name="contactNo" column="contact_no"/>
+		<property name="emailAddress" column="email_address"/>
+		<map name="memberResponsibilities" table="member_responsibilities">
+			<key column="member_no" not-null="true"/>
+			<map-key column="member_responsibility_name" type="string"/>
+			<many-to-many column="responsibility_no" class="Responsibility"/>
+		</map>
+	</class>
+</hibernate-mapping>

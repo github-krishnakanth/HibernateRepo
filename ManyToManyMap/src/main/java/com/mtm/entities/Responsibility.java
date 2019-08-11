@@ -1,0 +1,83 @@
+package com.mtm.entities;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "responsibility")
+public class Responsibility implements Serializable {
+	private static final long serialVersionUID = -7456304774827558945L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "responsibility_no")
+	protected int responsibilityNo;
+	protected String description;
+	@Column(name = "responsibility_type")
+	protected String responsibilityType;
+	
+	public int getResponsibilityNo() {
+		return responsibilityNo;
+	}
+	public void setResponsibilityNo(int responsibilityNo) {
+		this.responsibilityNo = responsibilityNo;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getResponsibilityType() {
+		return responsibilityType;
+	}
+	public void setResponsibilityType(String responsibilityType) {
+		this.responsibilityType = responsibilityType;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((description == null) ? 0 : description.hashCode());
+		result = prime * result + responsibilityNo;
+		result = prime * result + ((responsibilityType == null) ? 0 : responsibilityType.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Responsibility other = (Responsibility) obj;
+		if (description == null) {
+			if (other.description != null)
+				return false;
+		} else if (!description.equals(other.description))
+			return false;
+		if (responsibilityNo != other.responsibilityNo)
+			return false;
+		if (responsibilityType == null) {
+			if (other.responsibilityType != null)
+				return false;
+		} else if (!responsibilityType.equals(other.responsibilityType))
+			return false;
+		return true;
+	}
+	@Override
+	public String toString() {
+		return "Responsibility [responsibilityNo=" + responsibilityNo + ", description=" + description
+				+ ", responsibilityType=" + responsibilityType + "]";
+	}
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxool-config>
+	<proxool>
+		<alias>jdbcpool</alias>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<driver-url>jdbc:mysql://localhost:3306/hibernatedb</driver-url>
+		<driver-properties>
+			<property name="user" value="root"/>
+			<property name="password" value="root"/>
+		</driver-properties>
+		<minimum-connection-count>10</minimum-connection-count>
+		<maximum-connection-count>30</maximum-connection-count>
+	</proxool>
+</proxool-config>

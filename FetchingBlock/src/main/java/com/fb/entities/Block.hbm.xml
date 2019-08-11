@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping package="com.fb.entities">
+    	<class name="Block" table="blocks">
+    		<id name="blockNo" column="block_no"/>
+    		<property name="blockName" column="block_nm"/>
+    		<property name="description"/>
+    		<property name="units"/>
+    		<property name="societyNo" column="society_no"></property>
+    	</class>
+    </hibernate-mapping>

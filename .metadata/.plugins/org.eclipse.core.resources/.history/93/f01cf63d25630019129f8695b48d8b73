@@ -1,0 +1,8 @@
+package com.mtm.entities;
+
+import java.io.Serializable;
+
+public class Job implements Serializable{
+	
+	
+}

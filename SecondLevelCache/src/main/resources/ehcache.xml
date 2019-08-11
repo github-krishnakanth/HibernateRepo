@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+	<defaultCache maxElementsInMemory="1000" eternal="true"/>
+	<cache name="com.slc.entities.Block" maxElementsInMemory="1000" eternal="true"/>
+	<cache name="com.slc.entities.Block.flats" maxElementsInMemory="1000" eternal="true"/>
+</ehcache>

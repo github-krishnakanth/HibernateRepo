@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping package="com.flc.entities">
+    	<class name="Staff" table="staff">
+    		<id name="staffNo" column="staff_no"/>
+    		<property name="staffFirstName" column="staff_first_nm"/>
+    		<property name="staffLastName" column="staff_last_nm"/>
+    		<property name="type" column="type"/>
+    		<property name="contactNo" column="contact_no"/>
+    		<property name="emailAddress" column="email_address"/>
+    		<property name="addressLine1" column="addressLine1"/>
+    		<property name="addressLine2" column="addressLine2"/>
+    		<property name="city" column="city"/>
+    		<property name="state" column="state"/>
+    		<property name="zip" column="zip"/>
+    		<property name="country" column="country"/>
+    		<property name="societyNo" column="society_no"/>
+    	</class>	
+    </hibernate-mapping>

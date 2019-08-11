@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tch.entities">
+	<subclass name="MedicalPlan" extends="InsurancePlan" discriminator-value="Medical">
+		<property name="copay"/>
+		<property name="coverageType" column="coverage_type"/>
+		<property name="networkType" column="network_type"/>
+	</subclass>
+</hibernate-mapping>

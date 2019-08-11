@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcc.entities">
+	<union-subclass name="CurrentAccount" extends="Account" table="current_account">
+		<property name="overDraftLimit" column="over_draft_limit"/>
+		<property name="companyName" column="company_name"/>
+	</union-subclass>
+</hibernate-mapping>

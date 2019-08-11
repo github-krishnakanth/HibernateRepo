@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otomto.entities">
+	<class name="School" table="school">
+		<id name="schoolNo" column="school_no">
+			<generator class="increment"/>
+		</id>
+		<property name="schoolName" column="school_nm"/>
+		<property name="director"/>
+		<property name="establishedDate" column="established_date"/>
+		<property name="contactNo" column="contact_no"/>
+		<property name="emailAddress" column="email_address"/>
+	</class>
+</hibernate-mapping>    

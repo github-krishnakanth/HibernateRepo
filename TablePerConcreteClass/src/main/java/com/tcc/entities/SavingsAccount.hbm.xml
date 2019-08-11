@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcc.entities">
+	<union-subclass name="SavingsAccount" extends="Account" table="savings_account">
+		<property name="minBalance" column="min_balance"/>
+		<property name="hasChequeBookFacility" column="has_cheque_book_facility"/>
+		<property name="maxWithdrawsLimit" column="max_withdraws_limit"/>
+	</union-subclass>
+</hibernate-mapping>

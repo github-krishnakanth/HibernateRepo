@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tsc.entities">
+	<joined-subclass name="ChequePayment" extends="Payment" table="cheque_payment">
+		<key column="cheque_payment_no"/>
+		<property name="chequeNo" column="cheque_no"/>
+		<property name="chequeIssuedDate" column="cheque_issued_dt"/>
+		<property name="chequeIssuedName" column="cheque_issued_name"/>
+	</joined-subclass>
+</hibernate-mapping>

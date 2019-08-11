@@ -1,0 +1,9 @@
+package com.otm.entities;
+
+import java.io.Serializable;
+
+public class Cheque implements Serializable {
+	private static final long serialVersionUID = -5133772558532663873L;
+	
+	
+}

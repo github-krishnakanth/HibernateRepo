@@ -1,0 +1,11 @@
+package com.otm.entities;
+
+import java.io.Serializable;
+
+public class Branch implements Serializable {
+	private static final long serialVersionUID = 4526067895926041936L;
+	
+	
+	
+
+}

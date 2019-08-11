@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.oto.entities">
+	<class name="EmployementOffer" table="employement_offer">
+		<id name="offerId" column="offer_id">
+			<generator class="increment"/>
+		</id>
+		<property name="offerDate" column="offer_dt"/>
+		<property name="candidateName" column="candidate_nm"/>
+		<property name="mobileNo" column="mobile_no"/>
+		<property name="emailAddress" column="email_address"/>
+		<property name="designation"/>
+		<property name="dateOfJoin" column="date_of_join"/>
+		<property name="ctc"/>
+		<one-to-one name="employementOffer" class="EmployementOffer" cascade="all"/>
+	</class>
+</hibernate-mapping>

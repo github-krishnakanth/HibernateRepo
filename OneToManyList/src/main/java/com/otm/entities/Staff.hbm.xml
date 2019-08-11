@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otm.entities">
+	<class name="Staff" table="staff">
+		<id name="staffNo" column="staff_no">
+			<generator class="increment"/>
+		</id>
+		<property name="staffFirstName" column="staff_first_nm"/>
+		<property name="staffLastName" column="staff_last_nm"/>
+		<property name="type"/>
+		<property name="contactNo" column="contact_no"/>
+		<property name="emailAddress" column="email_address"/>
+		<property name="addressLine1"/>
+		<property name="addressLine2"/>
+		<property name="city"/>
+		<property name="state"/>
+		<property name="zip"/>
+		<property name="country"/>
+	</class>	
+</hibernate-mapping>

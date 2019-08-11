@@ -1,0 +1,18 @@
+package com.mtm.entities;
+
+import java.io.Serializable;
+import java.util.Set;
+
+public class Job implements Serializable{
+	private static final long serialVersionUID = 6720541190426795084L;
+	
+	protected int jobNo;
+	protected String title;
+	protected String description;
+	protected int offeredSalary;
+	protected String location;
+	
+	protected Set<Skill> skills;
+	
+	
+}

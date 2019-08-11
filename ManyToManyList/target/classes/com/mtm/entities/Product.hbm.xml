@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.mtm.entities">
+	<class name="Product" table="product">
+		<id name="productNo" column="product_no">
+			<generator class="increment"/>
+		</id>
+		<property name="productName" column="product_nm"/>
+		<property name="description"/>
+		<property name="productType" column="product_type"/>
+		<property name="price"/>
+	</class>	
+</hibernate-mapping>
