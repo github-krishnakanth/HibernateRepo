@@ -85,7 +85,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>5.4.0.Final</version>
+			<version>5.4.24.Final</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.hibernate</groupId>
@@ -111,7 +111,7 @@
 		</pluginManagement>
 	</build>
 	<properties>
-		<hibernate.version>5.4.0.Final</hibernate.version>
+		<hibernate.version>5.4.24.Final</hibernate.version>
 		<!-- <hibernate.version>4.3.11.Final</hibernate.version> -->
 		<!-- <hibernate.version>3.6.10.Final</hibernate.version> -->	
 	</properties>
